@@ -164,7 +164,7 @@ def text():
     volume, muted = info
     if muted:
         return ""
-    return f"%{{#ea999c}}{_icon(volume)} {volume}%"
+    return f" %{{#ea999c}}{_icon(volume)} {volume}%"
 
 if __name__ == "__main__":
     print(text())
