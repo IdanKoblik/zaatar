@@ -12,7 +12,7 @@ import tailscale
 import uptime
 import workspaces
 
-RIGHT = (pulseaudio, uptime, tailscale, cputemp, gputemp, memory)
+RIGHT = (uptime, tailscale, cputemp, gputemp, memory)
 
 # Gap rendered between adjacent right-side modules (they share one pill, so the
 # separator is what makes them breathe like waybar's spaced-out modules).
@@ -31,7 +31,7 @@ def line():
     left = _safe(workspaces)
     center = _safe(date)
     right = SEP.join(s for s in (_safe(m) for m in RIGHT) if s)
-    return f"{left}\t{center}\t{right}"
+    return f"%{{#d6d5d5}}  Void\t%{{#d6d5d5}}{center}\t%{{#d6d5d5}}{right}"
 
 
 def _watch_workspaces(wake):

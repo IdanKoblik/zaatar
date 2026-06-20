@@ -29,7 +29,7 @@ def get_uptime():
 
 
 def text():
-    return f"%{{#c6d0f5}}{get_uptime()}"
+    return f"{get_uptime()}"
 
 
 if __name__ == "__main__":
